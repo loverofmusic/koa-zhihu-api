@@ -3,7 +3,7 @@ const Koa = require("koa");
 const app = new Koa();
 
 app.use((ctx)=>{
-  console.log(5555)
+  ctx.body = "hello world"
 })
 
-app.listen("http://localhost:3000");
+app.listen(3000);
