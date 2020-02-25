@@ -23,3 +23,6 @@ Koa 编写仿知乎 API
 + 处理不同的 URL
 + 处理不同的 HTTP 方法
 + 解析 URL 上的参数
+
+8. 安装 koa-router，使用 koa-router 完成路由基本功能以及高级功能
+#### npm i koa-router --save-dev

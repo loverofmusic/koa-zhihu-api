@@ -1,26 +1,26 @@
+// 8. 安装 koa-router，使用 koa-router 完成路由基本功能以及高级功能
 const Koa = require("koa");
+const Router = require("koa-router");
 
 const app = new Koa();
+const router = new Router();
 
-app.use(async ctx => {
-  if (ctx.url === "/") {
-    ctx.body = "这是主页";
-  } else if (ctx.url === "/users") {
-    if (ctx.method === "GET") {
-      ctx.body = "这是用户列表页";
-    } else if (ctx.method === "POST") {
-      ctx.body = "创建用户";
-    } else {
-      ctx.status = 405;
-      // 405 Method Not Allowed 表明服务器禁止了使用当前 HTTP 方法的请求。
-      // 需要注意的是,GET 与 HEAD 两个方法不得被禁止,当然也不得返回状态码 405
-    }
-  } else if (ctx.url.match(/\/users\/\w+/)) {
-    const userId = ctx.url.match(/\/users\/(\w+)/)[1];
-    ctx.body = `这是用户 ${userId}`;
-  } else {
-    ctx.status = "这是用户列表页";
-  }
+router.get("/", ctx => {
+  ctx.body = "这是index页面";
 });
+
+router.get("/users", ctx => {
+  ctx.body = "这是用户列表页面";
+});
+
+router.post("/users", ctx => {
+  ctx.body = "这是创建用户页面";
+});
+
+router.get("/users/:id", ctx => {
+  ctx.body = `这是用户${ctx.params.id}`;
+});
+
+app.use(router.routes());
 
 app.listen(3000);
