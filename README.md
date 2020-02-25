@@ -15,3 +15,5 @@ Koa 编写仿知乎 API
 
 5. scripts 添加 nodemon 启动脚本
 #### npm run start
+
+6. async await 编写koa中间件，理解中间件执行顺序-洋葱模型
