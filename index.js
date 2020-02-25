@@ -4,23 +4,25 @@ const Router = require("koa-router");
 
 const app = new Koa();
 const router = new Router();
+const usersRouter = new Router({prefix: "/users"});
 
 router.get("/", ctx => {
   ctx.body = "这是index页面";
 });
 
-router.get("/users", ctx => {
+usersRouter.get("/", ctx => {
   ctx.body = "这是用户列表页面";
 });
 
-router.post("/users", ctx => {
+usersRouter.post("/", ctx => {
   ctx.body = "这是创建用户页面";
 });
 
-router.get("/users/:id", ctx => {
+usersRouter.get("/:id", ctx => {
   ctx.body = `这是用户${ctx.params.id}`;
 });
 
 app.use(router.routes());
+app.use(usersRouter.routes());
 
 app.listen(3000);
