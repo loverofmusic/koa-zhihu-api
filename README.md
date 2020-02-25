@@ -28,3 +28,22 @@ Koa 编写仿知乎 API
 #### npm i koa-router --save-dev
 
 9. RESTful API 最佳实践 ---- 增删改查，返回正确的响应
+
+10. 获取 HTTP 请求参数：
+
++ Query String(可选)，如 ?q=keyword
++ Router Params（必须）, 如 /users/:id
++ Body，如{name: "xxx"}
++ Header，如 Accept，Cookie
+
+11. 发送 HTTP 响应：
+
++ 发送 Status，如 200/400 等
++ 发送 Body，如{name: "xxx"}
++ 发送 Header，如Allow，Content-Type
+
+12. 编写 控制器 最佳实践：
+
++ 每个资源的控制器放在不同的文件里
++ 尽量使用 类+类方法 的形式编写控制器
++ 严谨的错误处理
