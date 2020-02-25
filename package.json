@@ -4,7 +4,8 @@
   "description": "koa-api",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "cross-env NODE_ENV=production node app",
+    "dev": "nodemon app"
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,11 @@
   "dependencies": {
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
-    "koa-json-error": "^3.1.2"
+    "koa-json-error": "^3.1.2",
+    "koa-parameter": "^3.0.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.0",
     "koa-router": "^8.0.8",
     "nodemon": "^2.0.2"
   }

@@ -67,4 +67,11 @@ Koa 编写仿知乎 API
   12.1 步骤：
   + 将路由单独放在一个目录
   + 将控制器单独放在一个目录
-  + 使用 类+类方法 的方式组织控制器
+  
+13. 使用 koa-error-json 进行错误处理
+  #### npm i koa-error-json --save
+  安装跨平台环境变量利器 
+  #### npm i cross-env --save-dev
+
+14. 使用 koa-parameter 进行参数校验
+  #### npm i koa-parameter --save
