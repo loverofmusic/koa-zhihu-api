@@ -26,3 +26,5 @@ Koa 编写仿知乎 API
 
 8. 安装 koa-router，使用 koa-router 完成路由基本功能以及高级功能
 #### npm i koa-router --save-dev
+
+9. RESTful API 最佳实践 ---- 增删改查，返回正确的响应

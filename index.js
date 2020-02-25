@@ -1,4 +1,4 @@
-// 8. 安装 koa-router，使用 koa-router 完成路由基本功能以及高级功能
+// 9. RESTful API 最佳实践 ---- 增删改查，返回正确的响应
 const Koa = require("koa");
 const Router = require("koa-router");
 
@@ -6,32 +6,32 @@ const app = new Koa();
 const router = new Router();
 const usersRouter = new Router({prefix: "/users"});
 
-const auth = async (ctx, next)=>{
-  if(ctx.url !== "/users"){
-    ctx.throw(401);
-    //unauthorized
-    //无权的; 未经授权的
-  }
-  await next();
-}
-
 router.get("/", ctx => {
   ctx.body = "这是index页面";
 });
 
-usersRouter.get("/", auth, ctx => {
-  ctx.body = "这是用户列表页面";
+usersRouter.get("/", ctx => {
+  ctx.body = [{name: "李雷"}, {name: "韩梅梅"}];
 });
 
-usersRouter.post("/", auth, ctx => {
-  ctx.body = "这是创建用户页面";
+usersRouter.post("/", ctx => {
+  ctx.body = {name: "李雷"};
 });
 
-usersRouter.get("/:id", auth, ctx => {
-  ctx.body = `这是用户${ctx.params.id}`;
+usersRouter.get("/:id", ctx => {
+  ctx.body = {name: "李雷"};
+});
+
+usersRouter.put("/:id", ctx => {
+  ctx.body = {name: "李雷2"};
+});
+
+usersRouter.delete("/:id", ctx => {
+  ctx.status = 204;
 });
 
 app.use(router.routes());
 app.use(usersRouter.routes());
+app.use(usersRouter.allowedMethods());
 
 app.listen(3000);
