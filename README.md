@@ -36,11 +36,27 @@ Koa 编写仿知乎 API
 + Body，如{name: "xxx"}
 + Header，如 Accept，Cookie
 
+  10.1 安装 koa-bodyparser：
+  #### npm i koa-bodyparser --save
+
+  10.2 步骤：
+  + 断点调试
+  + 获取 query
+  + 获取 router params
+  + 获取 body
+  + 获取 header
+
 11. 发送 HTTP 响应：
 
 + 发送 Status，如 200/400 等
 + 发送 Body，如{name: "xxx"}
 + 发送 Header，如Allow，Content-Type
+
+  11.1 步骤：
+  + 发送 Status
+  + 发送 Body
+  + 发送 Header
+  + 实现 增删改查， 通过 Postman 测试
 
 12. 编写 控制器 最佳实践：
 
