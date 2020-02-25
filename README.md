@@ -17,3 +17,9 @@ Koa 编写仿知乎 API
 #### npm run start
 
 6. async await 编写koa中间件，理解中间件执行顺序-洋葱模型
+
+7. 理解路由存在的意义，编写koa路由中间件
+
++ 处理不同的 URL
++ 处理不同的 HTTP 方法
++ 解析 URL 上的参数
