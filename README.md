@@ -82,3 +82,6 @@ Koa 编写仿知乎 API
 16. 分析用户模块schema，使用schema生成用户model
 
 17. mongodb实现用户增删改查
+
+18. 安装 jsonwebtoken 做注册登录鉴权
+#### npm i jsonwebtoken --save
