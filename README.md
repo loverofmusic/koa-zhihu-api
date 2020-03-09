@@ -75,3 +75,10 @@ Koa 编写仿知乎 API
 
 14. 使用 koa-parameter 进行参数校验
   #### npm i koa-parameter --save
+
+15. 使用mongoose连接数据库
+#### npm i mongoose --save
+
+16. 分析用户模块schema，使用schema生成用户model
+
+17. mongodb实现用户增删改查
