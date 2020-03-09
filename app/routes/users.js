@@ -13,7 +13,7 @@ router.post("/", create);
 router.get("/:id", findById);
 
 //修改特定用户
-router.put("/:id", update);
+router.patch("/:id", update);
 
 //删除特定用户
 router.delete("/:id", del);

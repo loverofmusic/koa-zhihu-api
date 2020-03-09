@@ -85,3 +85,7 @@ Koa 编写仿知乎 API
 
 18. 安装 jsonwebtoken 做注册登录鉴权
 #### npm i jsonwebtoken --save
+
+19. 实现注册，用户名必须有，用户名不能重复 密码必须有，密码不能返回
+
+20. 实现登录并获取 token
