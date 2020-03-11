@@ -89,3 +89,12 @@ Koa 编写仿知乎 API
 19. 实现注册，用户名必须有，用户名不能重复 密码必须有，密码不能返回
 
 20. 实现登录并获取 token
+
+21. 用koa-jwt中间件实现用户认证与授权
+
+22. 文件上传 使用 koa-body 替换 koa-bodyparser
+#### npm i koa-body --save
+
+23. 设置 图片上传目录
+
+24. 使用 postman 上传文件
