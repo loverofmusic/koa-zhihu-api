@@ -1,5 +1,5 @@
 # koa-zhihu-api
-Koa 编写仿知乎 API
+Koa 编写 仿知乎 API
 
 ### 迭代过程
 1. 初始化项目
