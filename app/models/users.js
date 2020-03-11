@@ -34,10 +34,12 @@ const userSchema = new Schema({
       {
         type: String
       }
-    ]
+    ],
+    select: false
   },
   business: {
-    type: String
+    type: String,
+    select: false
   },
   employments: {
     type: [
@@ -49,7 +51,8 @@ const userSchema = new Schema({
           type: String
         }
       }
-    ]
+    ],
+    select: false
   },
   educations: {
     type: [
@@ -71,7 +74,8 @@ const userSchema = new Schema({
           type: Number
         }
       }
-    ]
+    ],
+    select: false
   }
 });
 
