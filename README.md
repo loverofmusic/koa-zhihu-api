@@ -106,3 +106,5 @@ Koa 编写 仿知乎 API
 27. 个人资料参数校验
 
 28. ?fields=educations&locations 查看用户 字段过滤
+
+29. 关注，取消关注； 获取关注人，粉丝列表（多对多）schema 设计
